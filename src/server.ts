@@ -38,5 +38,5 @@ app.use(
 )
 
 app.listen(3333, () => {
-  console.log('🚀️ Aplicação voando na porta 3000.')
+  console.log('🚀️ Aplicação voando na porta 3333.')
 })
