@@ -22,7 +22,10 @@
     "class-methods-use-this": "off",
     "camelcase": "off",
     "semi": 0,
-    "prettier/prettier": ["error"],
+    "prettier/prettier": [
+      "error"
+    ],
+    "no-useless-constructor": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
