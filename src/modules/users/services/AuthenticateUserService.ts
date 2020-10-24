@@ -1,5 +1,6 @@
 import { compare } from 'bcryptjs'
 import { sign } from 'jsonwebtoken'
+import { injectable, inject } from 'tsyringe'
 
 import AppError from '@shared/errors/AppError'
 
@@ -22,8 +23,12 @@ const enum Errors {
   incorrectCombination = 'Incorrect e-mail/password combination.',
 }
 
+@injectable()
 class AuthenticateUserService {
-  constructor(private usersRepository: IUserRepository) { }
+  constructor(
+    @inject('UsersRepository')
+    private usersRepository: IUserRepository,
+  ) { }
 
   public async execute({ email, password }: IRequest): Promise<IResponse> {
     const user = await this.usersRepository.findByEmail(email)
