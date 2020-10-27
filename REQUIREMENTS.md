@@ -1,5 +1,3 @@
-
-
 # Recuperação de senha
 
 **RF**
